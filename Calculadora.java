@@ -1,34 +1,33 @@
+import java.util.Scanner;
+
 public class Calculadora {
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         System.out.println("Bienvenido a la calculadora de San Viator");
-        suma(5, 3);
-        resta(10, 4);
-        multiplicacion(6, 7);
-        division(20, 4);
-    }
+        System.out.println("Elije una opción del 1 al 4");
+        Scanner teclado = new Scanner (System.in);
+        int numero = teclado.nextInt();
 
-    public static void suma(int a, int b) {
-        int resultado = a + b;
-        System.out.println("El resultado de la suma es: " + resultado);
-    }
-
-    public static void resta(int a, int b) {
-        int resultado = a - b;
-        System.out.println("El resultado de la resta es: " + resultado);
-    }
-
-    public static void multiplicacion(int a, int b) {
-        int resultado = a * b;
-        System.out.println("El resultado de la multiplicación es: " + resultado);
-    }
-
-    public static void division(int a, int b) {
-        if (b != 0) {
-            int resultado = a / b;
-            System.out.println("El resultado de la división es: " + resultado);
+        if (numero == 1) {
+            sumar();
+        } else if (numero == 2) {
+            restar();
+        } else if (numero == 3) {
+            multiplicar();
         } else {
-            System.out.println("Error: No se puede dividir entre cero.");
+            dividir();
         }
+    }
+
+    public static void sumar(){
+        System.out.println("Opción SUMAR");
+    }
+    public static void restar(){
+        System.out.println("Opción RESTAR");
+    }
+    public static void multiplicar(){
+        System.out.println("Opción MULTIPLICAR");
+    }
+    public static void dividir(){
+        System.out.println("Opción DIVIDIR");
     }
 }
